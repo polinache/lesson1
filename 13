@@ -1,0 +1,15 @@
+from math import *
+m = list(map(int, input().split()))
+sum = 0
+i = 0
+while True:
+    if m[i] == 2:
+        if m[i+1] == 2:
+            i += 1
+        else:
+            m.pop(i)
+    else:
+        i += 1
+    if i > len(m)-2:
+        break
+print(floor(sum(m)/len(m)))
