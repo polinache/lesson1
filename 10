@@ -1,0 +1,7 @@
+A = list(map(int, input().split()))
+a = int(input())
+b = len(A)
+for i in range (a):
+    A.insert(b-1-A[b-1], A[b-1])
+    A.pop()
+print(' '.join(map(str, A)))
