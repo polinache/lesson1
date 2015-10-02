@@ -1,0 +1,15 @@
+def fun(a, b):
+    posl = [1 for i in range(b)]
+    for i in range(a-b+1):
+        summa = sum(posl)
+        for j in range(b-1):
+            posl[j] = posl[j+1]
+        posl[b-1] = summa
+    return posl[b-1]
+inp = list(map(int, input().split()))
+b = inp[0]
+a = inp[1]
+if 0 <= a <= b-1:
+    print(1)
+else:
+    print(fun(a, b))
